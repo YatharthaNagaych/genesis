@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDG Genesis - Cyber-Verse & KBH Video Showcase</title>
+  <meta name="description" content="Explore the Google Developer Group (GDG) Genesis Multiverse and the featured Kailash Boys Hostel (KBH) showcase. Discover technology domains, hackathons, and developer culture at NIT Hamirpur.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Rubik+Glitch&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=11">
+</head>
+<body class="cyber-dark-theme">
+
+  <!-- Custom Web Shooting Cursor Canvas -->
+  <canvas id="cursorCanvas"></canvas>
+
+  <!-- Interactive Spider-Sense Overlay (for radar scanning alert) -->
+  <div id="spiderSenseOverlay"></div>
+
+  <!-- Cyber-Glass Floating Header -->
+  <header class="glass-header">
+    <div class="header-inner">
+      <div class="logo-container" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <!-- SVG Blending GDG Brackets and Spider-Web -->
+        <svg class="gdg-logo-svg" viewBox="0 0 100 100" width="38" height="38">
+          <!-- Web background lines -->
+          <path d="M50,10 L50,90 M10,50 L90,50 M20,20 L80,80 M20,80 L80,20" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <path d="M50,25 L68,37 L68,63 L50,75 L32,63 L32,37 Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <!-- Official Google Colors GDG Brackets -->
+          <path d="M35,35 L20,50 L35,65" stroke="#4285F4" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M65,35 L80,50 L65,65" stroke="#EA4335" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="54" y1="25" x2="46" y2="75" stroke="#34A853" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="8" fill="#FBBC05"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-genesis">GENESIS</span>
+          <span class="logo-gdg">Google Developer Groups</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Hub</a>
+        <a href="#kbh" class="nav-link kbh-nav-highlight"><span class="nav-dot"></span>KBH Showcase</a>
+        <a href="#domains" class="nav-link">Domains</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#alerts" class="nav-link">Intel</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="spiderSenseBtn" class="control-btn warning-btn" title="Trigger Spider-Sense (S Key)">
+          <span class="pulse-indicator"></span>
+          <span class="btn-text">🚨 Spider-Sense</span>
+        </button>
+        <button id="mobileMenuBtn" class="control-btn mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <span class="drawer-title">GENESIS // NAVIGATION</span>
+        <button class="drawer-close" id="mobileDrawerClose">&times;</button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="#hero" class="mobile-nav-link active">🏠 Hub Nexus</a>
+        <a href="#kbh" class="mobile-nav-link kbh-link">🎥 Kailash Boys Hostel (KBH)</a>
+        <a href="#domains" class="mobile-nav-link">⚡ Tech Domains</a>
+        <a href="#events" class="mobile-nav-link">🏆 Conducted Events</a>
+        <a href="#alerts" class="mobile-nav-link">⚠️ Classified Intel</a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <button id="mobileSpiderSenseBtn" class="cta-btn primary-cta mobile-sense-btn">
+          <span>🚨 Trigger Spider-Sense</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section ("The Genesis Nexus") -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow-blob blob-blue"></div>
+      <div class="hero-glow-blob blob-red"></div>
+      <div class="hero-glow-blob blob-purple"></div>
+      
+      <div class="hero-container-split">
+        <!-- Left: Branding & CTAs -->
+        <div class="hero-split-left">
+          <div class="spider-badge">
+            <span class="badge-icon">🕸️</span>
+            <span>GDG NITH // CHAPTER ACTIVE</span>
+          </div>
+
+          <h1 class="hero-title glitch-text" data-text="GOOGLE DEVELOPER GROUPS">GOOGLE DEVELOPER GROUPS</h1>
+          
+          <!-- Google Developer Groups Motto Pills -->
+          <div class="gdg-motto-pills">
+            <span class="motto-pill pill-blue"><span class="motto-dot"></span>Build</span>
+            <span class="motto-pill pill-red"><span class="motto-dot"></span>Learn</span>
+            <span class="motto-pill pill-green"><span class="motto-dot"></span>Connect</span>
+            <span class="motto-pill pill-yellow"><span class="motto-dot"></span>Grow</span>
+          </div>
+          
+          <p class="hero-subtitle">
+            Welcoming you to <strong>GDG NITH</strong> (NIT Hamirpur Chapter, GDG Ludhiana). Web-weaving futuristic technology, AI models, reactive applications, and campus communities. Click anywhere to shoot Google data-webs!
+          </p>
+
+          <div class="hero-actions">
+            <a href="#kbh" class="cta-btn primary-cta">
+              <span>🎥 KBH Video Feed</span>
+            </a>
+            <a href="#domains" class="cta-btn secondary-cta">
+              <span>⚡ Explore Domains</span>
+            </a>
+          </div>
+
+          <div class="hero-telemetry-strip">
+            <div class="telemetry-item">
+              <span class="telemetry-label">COMMUNITY</span>
+              <span class="telemetry-value google-blue">GDG NITH</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">OUTPOST</span>
+              <span class="telemetry-value google-red">NIT Hamirpur</span>
+            </div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">NETWORK</span>
+              <span class="telemetry-value google-green">GDG Global</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Holographic 3D Sticker Card -->
+        <div class="hero-split-right">
+          <div class="sticker-card glass-panel animate-float">
+            <div class="sticker-card-header">
+              <div class="card-status-dot"></div>
+              <span class="card-status-title">NEXUS // VERIFIED STICKER</span>
+            </div>
+            <div class="sticker-image-wrapper">
+              <img src="WhatsApp%20Image%202026-08-30%20at%2021.07.09.jpeg" alt="GDG Genesis Sticker" class="sticker-image">
+              <div class="sticker-scanner-beam"></div>
+            </div>
+            <div class="sticker-card-footer">
+              <div class="badge-chip">NIT HAMIRPUR</div>
+              <div class="badge-chip red-chip">GENESIS 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Scroll to KBH Showcase</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </section>
+
+    <!-- Dedicated Kailash Boys Hostel / KBH Section (Placed Above Domains) -->
+    <section id="kbh" class="kbh-section">
+      <div class="kbh-glow-bg"></div>
+      
+      <div class="section-header">
+        <div class="section-badge kbh-badge">
+          <span class="beacon-dot"></span>
+          <span>SECTOR // KBH OUTPOST</span>
+        </div>
+        <h2 class="section-title glitch-text" data-text="Kailash Boys Hostel / KBH">Kailash Boys Hostel / KBH</h2>
+        <p class="section-desc">The epicenter of late-night hackathons, developer brotherhood, and breakthrough builds at NIT Hamirpur.</p>
+      </div>
+
+      <!-- KBH Grand Cyber Theater Showcase Container -->
+      <div class="kbh-showcase-container glass-panel full-theater-layout">
+        
+        <!-- Grand Cyber-Deck Video Player Frame -->
+        <div class="kbh-video-column full-theater">
+          <div class="kbh-video-frame">
+            
+            <div class="kbh-video-topbar">
+              <div class="topbar-left">
+                <span class="kbh-rec-dot"></span>
+                <span class="topbar-title">LIVE FEED // KAILASH BOYS HOSTEL (KBH) OUTPOST</span>
+              </div>
+              <div class="topbar-right">
+                <span class="hud-mono">FORMAT: H.264 // ULTRA-HD STREAM</span>
+              </div>
+            </div>
+
+            <div class="kbh-video-wrapper" id="kbhVideoWrapper">
+              <video id="kbhVideo" class="kbh-video grand-screen" playsinline loop autoplay muted controls preload="auto">
+                <source src="WhatsApp%20Video%202026-09-06%20at%2019.03.22.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              
+              <!-- Video Corner Cyber Brackets -->
+              <div class="frame-corner corner-tl"></div>
+              <div class="frame-corner corner-tr"></div>
+              <div class="frame-corner corner-bl"></div>
+              <div class="frame-corner corner-br"></div>
+            </div>
+
+            <!-- Custom Cyber Audio Visualizer / Control Bar -->
+            <div class="kbh-controls-bar">
+              <div class="kbh-playback-status">
+                <span class="status-indicator-badge">STREAMING LIVE</span>
+                <span class="hud-mono" id="kbhTimeCode">00:00 // 00:30</span>
+              </div>
+              
+              <!-- Equalizer Sound Wave -->
+              <div class="kbh-sound-eq" id="kbhEqualizer">
+                <span class="eq-bar bar-1"></span>
+                <span class="eq-bar bar-2"></span>
+                <span class="eq-bar bar-3"></span>
+                <span class="eq-bar bar-4"></span>
+                <span class="eq-bar bar-5"></span>
+                <span class="eq-bar bar-6"></span>
+                <span class="eq-bar bar-7"></span>
+                <span class="eq-bar bar-8"></span>
+              </div>
+
+              <div class="kbh-btn-group">
+                <button class="cyber-btn" id="kbhPlayPauseBtn" title="Play/Pause Video">⏸️ Pause</button>
+                <button class="cyber-btn" id="kbhMuteBtn" title="Toggle Sound">🔊 Unmute</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Below Video: 3 KBH Hostel Culture & Telemetry Modules -->
+        <div class="kbh-bottom-grid">
+          
+          <div class="kbh-card glass-card border-blue">
+            <div class="kbh-card-header">
+              <span class="kbh-card-icon">⚡</span>
+              <h4 class="kbh-card-title">Late-Night War Rooms</h4>
+            </div>
+            <p class="kbh-card-text">
+              Where hackathon teams assemble after hours. From training machine learning models to squashing critical server bugs, the rooms of KBH buzz with pure developer energy.
+            </p>
+          </div>
+
+          <div class="kbh-card glass-card border-red">
+            <div class="kbh-card-header">
+              <span class="kbh-card-icon">🤝</span>
+              <h4 class="kbh-card-title">Developer Brotherhood</h4>
+            </div>
+            <p class="kbh-card-text">
+              Seniors mentoring juniors, impromptu peer code reviews, and cross-domain collaborations that transition into winning hackathon projects and lifelong friendships.
+            </p>
+          </div>
+
+          <div class="kbh-card glass-card border-green">
+            <div class="kbh-card-header">
+              <span class="kbh-card-icon">📍</span>
+              <h4 class="kbh-card-title">Campus Coordinates</h4>
+            </div>
+            <p class="kbh-card-text">
+              <strong>Sector KBH &bull; NIT Hamirpur, Himachal Pradesh.</strong> Home to the active GDG core team members, creative innovators, and student developers.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Quick Stats Grid -->
+        <div class="kbh-stats-strip">
+          <div class="kbh-stat-box">
+            <span class="stat-number google-blue">400+</span>
+            <span class="stat-label">Hostel Residents</span>
+          </div>
+          <div class="kbh-stat-box">
+            <span class="stat-number google-red">24/7</span>
+            <span class="stat-label">Coding Energy</span>
+          </div>
+          <div class="kbh-stat-box">
+            <span class="stat-number google-green">&infin;</span>
+            <span class="stat-label">Shared Memories</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GDG Technology Domains Section -->
+    <section id="domains" class="domains-section">
+      <div class="section-header">
+        <div class="section-badge google-blue-tag">TECH TRACKS</div>
+        <h2 class="section-title">GDG Technology Domains</h2>
+        <p class="section-desc">Explore what we build. Cards are color-coded to Google's technology specifications. Click any card to inspect the cognitive data stack.</p>
+        
+        <!-- Filter Controls -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All Domains</button>
+          <button class="filter-btn" data-filter="tech">Core Tech</button>
+          <button class="filter-btn" data-filter="creative">Creative Arts</button>
+          <button class="filter-btn" data-filter="community">Community</button>
+        </div>
+      </div>
+
+      <!-- 10 Domains Grid with Google Colors -->
+      <div class="domains-grid">
+        
+        <!-- Card 1: Genesis Hub -->
+        <div class="domain-card glass-panel gdg-blue-card" data-category="tech" data-id="1">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Genesis Hub">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag blue-tag">Welcome</span>
+              <span class="card-id-badge">#01</span>
+            </div>
+            <h3 class="card-title">Genesis Hub</h3>
+            <p class="card-desc">Welcome to the GDG Genesis terminal. Access technical tracks, study groups, and outreach hubs.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 2: AI/ML -->
+        <div class="domain-card glass-panel gdg-yellow-card" data-category="tech" data-id="2">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="aiml.jpg" alt="AI & Machine Learning">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag yellow-tag">AI/ML</span>
+              <span class="card-id-badge">#02</span>
+            </div>
+            <h3 class="card-title">AI & Machine Learning</h3>
+            <p class="card-desc">Building neural networks, training datasets, predictive intelligence, and natural language models.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Web Dev -->
+        <div class="domain-card glass-panel gdg-blue-card" data-category="tech" data-id="3">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=600&q=80" alt="Web Dev">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag blue-tag">Web Dev</span>
+              <span class="card-id-badge">#03</span>
+            </div>
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-desc">Developing reactive frontend frameworks, scalable backend servers, and interactive web experiences.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 4: App Dev -->
+        <div class="domain-card glass-panel gdg-green-card" data-category="tech" data-id="4">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="App Dev">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag green-tag">App Dev</span>
+              <span class="card-id-badge">#04</span>
+            </div>
+            <h3 class="card-title">App Development</h3>
+            <p class="card-desc">Building native Android solutions, cross-platform iOS modules, and mobile SDK integration packages.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 5: UI/UX -->
+        <div class="domain-card glass-panel gdg-red-card" data-category="creative" data-id="5">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" alt="UI/UX">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag red-tag">UI/UX</span>
+              <span class="card-id-badge">#05</span>
+            </div>
+            <h3 class="card-title">UI/UX Design</h3>
+            <p class="card-desc">Designing digital interface wireframes, component design systems, prototyping, and accessibility.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 6: Blockchain -->
+        <div class="domain-card glass-panel gdg-green-card" data-category="tech" data-id="6">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=600&q=80" alt="Blockchain">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag green-tag">Blockchain</span>
+              <span class="card-id-badge">#06</span>
+            </div>
+            <h3 class="card-title">Blockchain Networks</h3>
+            <p class="card-desc">Structuring decentralized ledgers, distributed nodes, smart contracts, and cryptographic grids.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 7: Video Editing -->
+        <div class="domain-card glass-panel gdg-blue-card" data-category="creative" data-id="7">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&w=600&q=80" alt="Video Editing">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag blue-tag">Media Arts</span>
+              <span class="card-id-badge">#07</span>
+            </div>
+            <h3 class="card-title">Video Editing & Media</h3>
+            <p class="card-desc">Constructing high-fidelity promotional media, event highlights, dynamic loops, and motion graphics.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 8: Marketing & PR -->
+        <div class="domain-card glass-panel gdg-red-card" data-category="community" data-id="8">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=600&q=80" alt="Marketing">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag red-tag">Marketing</span>
+              <span class="card-id-badge">#08</span>
+            </div>
+            <h3 class="card-title">Marketing & Outreach</h3>
+            <p class="card-desc">Publishing newsletters, organizing technical bootcamps, managing outreach campaigns, and public relations.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 9: Genesis Hackathon -->
+        <div class="domain-card glass-panel gdg-blue-card" data-category="tech" data-id="9">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Hackathon">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag blue-tag">Hackathon</span>
+              <span class="card-id-badge">#09</span>
+            </div>
+            <h3 class="card-title">Genesis Hackathon</h3>
+            <p class="card-desc">A 36-hour technical hackathon sprint where student developer teams construct innovative prototype applications.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Card 10: Community Outpost -->
+        <div class="domain-card glass-panel gdg-red-card" data-category="community" data-id="10">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Community">
+            <div class="card-media-glow"></div>
+            <div class="corner-bracket top-left"></div>
+            <div class="corner-bracket bottom-right"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag red-tag">Community</span>
+              <span class="card-id-badge">#10</span>
+            </div>
+            <h3 class="card-title">GDG Community</h3>
+            <p class="card-desc">A network of peer developer groups supporting collaborative tech builds, local meetups, and developer growth ecosystems.</p>
+            <div class="card-action-hint">Click to Inspect &rarr;</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Past Conducted Events -->
+    <section id="events" class="events-section">
+      <div class="section-header">
+        <div class="section-badge google-red-tag">CAMPUS INITIATIVES</div>
+        <h2 class="section-title">Conducted Events & Hackathons</h2>
+        <p class="section-desc">Explore the workshops, hackathons, and inductions hosted by GDG NITH. Click any event card to view high-resolution posters and data.</p>
+      </div>
+
+      <div class="events-grid">
+        
+        <!-- Event 1: Slab Hackathon -->
+        <div class="domain-card event-card glass-panel gdg-blue-card" data-category="tech" data-id="11">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="slab_poster.png" alt="Slab Hackathon">
+            <div class="card-media-glow"></div>
+            <div class="prize-pill">₹25,000 PRIZE</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag blue-tag">Hackathon</span>
+              <span class="card-id-badge">#EVENT-1</span>
+            </div>
+            <h3 class="card-title">Slab Hackathon</h3>
+            <p class="card-desc">An AI agent building challenge powered by webcmd at NIT Hamirpur with a ₹25,000 prize pool.</p>
+            <div class="card-action-hint">Click to Inspect Poster &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Event 2: Cryptex CTF -->
+        <div class="domain-card event-card glass-panel gdg-red-card" data-category="tech" data-id="12">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="cryptex_poster.jpg" alt="Cryptex CTF">
+            <div class="card-media-glow"></div>
+            <div class="prize-pill red-pill">₹20,000 PRIZE</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag red-tag">CyberSecurity</span>
+              <span class="card-id-badge">#EVENT-2</span>
+            </div>
+            <h3 class="card-title">Cryptex CTF</h3>
+            <p class="card-desc">Capture The Flag cybersecurity contest hosted with Nimbus featuring a ₹20,000 cash prize.</p>
+            <div class="card-action-hint">Click to Inspect Poster &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Event 3: Genesis Induction -->
+        <div class="domain-card event-card glass-panel gdg-green-card" data-category="community" data-id="13">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="genesis_poster.jpg" alt="GDG Genesis Induction">
+            <div class="card-media-glow"></div>
+            <div class="prize-pill green-pill">₹10,000 PRIZE</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag green-tag">Induction</span>
+              <span class="card-id-badge">#EVENT-3</span>
+            </div>
+            <h3 class="card-title">GDG Genesis Induction</h3>
+            <p class="card-desc">The official welcoming induction of GDG NITH at the Auditorium, featuring ₹10,000 in prizes.</p>
+            <div class="card-action-hint">Click to Inspect Poster &rarr;</div>
+          </div>
+        </div>
+
+        <!-- Event 4: Abyss Almanac -->
+        <div class="domain-card event-card glass-panel gdg-yellow-card" data-category="creative" data-id="14">
+          <div class="card-media-wrapper">
+            <img class="card-image" src="abyss_poster.jpg" alt="Abyss Almanac">
+            <div class="card-media-glow"></div>
+            <div class="prize-pill yellow-pill">₹70,000 PRIZE</div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-tag yellow-tag">Creative Track</span>
+              <span class="card-id-badge">#EVENT-4</span>
+            </div>
+            <h3 class="card-title">Abyss Almanac</h3>
+            <p class="card-desc">A card systems and design challenge with prizes worth ₹70,000 celebrating creative programming.</p>
+            <div class="card-action-hint">Click to Inspect Poster &rarr;</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Eye-Catching Instagram Classified Stream -->
+    <section id="alerts" class="clickbait-section">
+      <div class="clickbait-container glass-panel">
+        <div class="clickbait-split">
+          
+          <div class="clickbait-left">
+            <div class="clickbait-image-wrapper">
+              <img src="insta_clickbait.jpg" alt="Spider-Sense Threat Alert" class="clickbait-image">
+            </div>
+          </div>
+
+          <div class="clickbait-right">
+            <div class="clickbait-badge">⚠️ CLASSIFIED DATA STREAM DETECTED</div>
+            <h3 class="clickbait-title">Spider-Sense is Tingling! 🚨</h3>
+            <p class="clickbait-desc">A highly encrypted GDG databank has been intercepted under coordinates: <strong>@nith_gdgl</strong>. Decrypted logs contain upcoming event leaks, hackathons, and project files. <strong>Follow the channel to gain permanent database clearance and keep your Spider-Sense active!</strong></p>
+            
+            <div class="clickbait-action">
+              <a href="https://www.instagram.com/nith_gdgl/" target="_blank" rel="noopener noreferrer" class="clickbait-btn">
+                <span class="btn-glitch-text">UNMASK SECURE DATABASE</span>
+                <span class="btn-spider-web">🕸️</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detailed Interactive Modal -->
+  <div id="videoModal" class="modal-overlay">
+    <div class="modal-container glass-panel">
+      <button class="close-btn" id="closeModalBtn">&times;</button>
+      <div class="modal-body">
+        
+        <div class="modal-media-wrapper">
+          <img id="modalPoster" style="display: block; width: 100%; height: auto; max-height: 60vh; object-fit: contain; border-radius: 8px;" alt="Poster Preview">
+        </div>
+        
+        <div class="modal-details">
+          <div class="modal-header-info">
+            <span id="modalTag" class="card-tag">Tag</span>
+            <h2 id="modalTitle" class="modal-title">Portal Title</h2>
+          </div>
+          
+          <p id="modalDesc" class="modal-desc">This is the detailed description of the technology domain.</p>
+          
+          <div class="tech-hud-readout">
+            <h4 class="hud-sub">COGNITIVE DATA STACK</h4>
+            <pre id="modalReadout" class="hud-code">INITIALIZING READOUT...</pre>
+          </div>
+          
+          <button class="cta-btn primary-cta modal-cta-btn" id="modalActionBtn">Access Domain Stack</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bg-spider">🕸️</div>
+    <div class="footer-content">
+      <div class="footer-motto-links">
+        <span class="google-blue">Build</span> &bull; 
+        <span class="google-red">Learn</span> &bull; 
+        <span class="google-green">Connect</span> &bull; 
+        <span class="google-yellow">Grow</span>
+      </div>
+      <p>&copy; 2026 Google Developer Groups NITH &bull; Genesis Portal. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://gdg.community.dev/" target="_blank" rel="noopener noreferrer">GDG Global</a>
+        <a href="https://www.instagram.com/nith_gdgl/" target="_blank" rel="noopener noreferrer">Instagram (@nith_gdgl)</a>
+        <a href="#kbh">KBH Showcase</a>
+        <a href="#hero">Return to Hub</a>
+      </div>
+      <p class="footer-spider-sense">Spider-Sense is active. Press 'S' on your keyboard to scan for anomalies.</p>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js?v=11"></script>
+</body>
+</html>
